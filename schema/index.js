@@ -6,5 +6,6 @@ module.exports = gql`
   }
   type Query {
     hello: String
+    getConservationAreas: String
   }
 `;
