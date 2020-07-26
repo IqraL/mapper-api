@@ -1,11 +1,13 @@
 const { gql } = require("apollo-server-express");
+const GraphQLJSON = require("graphql-type-json");
+
 module.exports = gql`
-  type TrainStain {
-    crs: String!
-    stationName: String
+  scalar JSON
+
+  type polygon {
+    markers: JSON
   }
   type Query {
-    hello: String
-    getConservationAreas: String
+    getConservationAreas: JSON
   }
 `;

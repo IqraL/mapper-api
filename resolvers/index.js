@@ -12,42 +12,37 @@ const sequelize = new Sequelize(
 
 module.exports = {
   Query: {
-    hello: async () => {
-      console.log(process.env);
-      try {
-        //await sequelize.authenticate();
-
-        const [results, metadata] = await sequelize.query("SELECT * FROM test");
-
-        console.log("Connection has been established successfully.");
-        console.log("*************");
-        console.log(results);
-        console.log("*************");
-      } catch (error) {
-        console.error("Unable to connect to the database:", error);
-      }
-      return "Hi world";
-    },
     getConservationAreas: async () => {
       try {
         const [results, metadata] = await sequelize.query(
-          "SELECT * FROM geoData LIMIT 1"
+          "SELECT * FROM geoData "
         );
         const coordinates = results.map((r) => {
           const value = JSON.parse(r.value);
-
           return value.features.map((f) => f.geometry.coordinates[0]);
         });
 
-        console.log("Connection has been established successfully.");
-        console.log("*************");
-        coordinates.map((c) => {
-          console.log("--------------------");
-          console.log(c);
-          console.log("--------------------");
+        const temp = [];
+        coordinates.forEach((c) => {
+          c.forEach((a) => {
+            temp.push(a);
+          });
         });
-        //  console.log(results[0].value.features[0].geometry.coordinates[0]);
-        console.log("*************");
+
+        const conservationAreasProcessed = [];
+
+        for (let area of temp) {
+          const areaTemp = [];
+          for (let coordinates of area) {
+            const coordinateTemp = [];
+            coordinateTemp.push(coordinates[1]);
+            coordinateTemp.push(coordinates[0]);
+            areaTemp.push(coordinateTemp);
+          }
+          conservationAreasProcessed.push(areaTemp);
+        }
+
+        return conservationAreasProcessed;
       } catch (e) {
         console.log(e);
         throw e;
