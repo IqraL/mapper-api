@@ -1,4 +1,5 @@
 const { Sequelize } = require("sequelize");
+const cctvRawData = require("../data/CctvData.json");
 
 const sequelize = new Sequelize(
   process.env.DATABASE,
@@ -12,10 +13,21 @@ const sequelize = new Sequelize(
 
 module.exports = {
   Query: {
+    getCctvLocations: async () => {
+      const cctvProcessed = cctvRawData.features.map((cctvObj) => {
+        const revesedPoints = [];
+        revesedPoints.push(cctvObj.geometry.coordinates[1]);
+        revesedPoints.push(cctvObj.geometry.coordinates[0]);
+
+        return { points: revesedPoints, location: cctvObj.properties.location };
+      });
+
+      return cctvProcessed;
+    },
     getConservationAreas: async () => {
       try {
         const [results, metadata] = await sequelize.query(
-          "SELECT * FROM geoData "
+          "SELECT * FROM geoData WHERE type = 'ConservationAreas'"
         );
         const coordinates = results.map((r) => {
           const value = JSON.parse(r.value);

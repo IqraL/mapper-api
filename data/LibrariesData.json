@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "Libraries",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 1, "NAME": "West Norwood Library", "POSTCODE": "SE27 0HY", "TELEPHONE": "020 7926 8092", "UPRN": "100023265727", "ADDRESS_1": "14-16 Knight's Hill", "EASTING": "531887", "NORTHING": "172127" }, "geometry": { "type": "Point", "coordinates": [ -0.104089207569172, 51.432850023567774 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 2, "NAME": "Clapham Library", "POSTCODE": "SW4 7DB", "TELEPHONE": "020 7926 0717", "UPRN": "010090197569", "ADDRESS_1": "91 Clapham High Street", "EASTING": "529749", "NORTHING": "175457" }, "geometry": { "type": "Point", "coordinates": [ -0.133614111735428, 51.463209983958173 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 3, "NAME": "Brixton Library", "POSTCODE": "SW2 1JQ", "TELEPHONE": "020 7926 1056", "UPRN": "200000455963", "ADDRESS_1": "Brixton Oval", "EASTING": "531067", "NORTHING": "175255" }, "geometry": { "type": "Point", "coordinates": [ -0.114844322922814, 51.461041034365316 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 4, "NAME": "Carnegie Library", "POSTCODE": "SE24 0AG", "TELEPHONE": "020 7926 6050", "UPRN": "200000466323", "ADDRESS_1": "188 Herne Hill Road", "EASTING": "532328", "NORTHING": "175252" }, "geometry": { "type": "Point", "coordinates": [ -0.096559989298351, 51.460679830075755 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 5, "NAME": "Durning Library", "POSTCODE": "SE11 4HF", "TELEPHONE": "020 7926 8682", "UPRN": "100023229223", "ADDRESS_1": "167 Kennington Lane", "EASTING": "531310", "NORTHING": "178342" }, "geometry": { "type": "Point", "coordinates": [ -0.11020843146531, 51.488880317424325 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 6, "NAME": "Minet \/ Lambeth Archives", "POSTCODE": "SE5 9QY", "TELEPHONE": "020 7926 6076", "UPRN": "100021859495", "ADDRESS_1": "52 Knatchbull Road", "EASTING": "531686", "NORTHING": "176405" }, "geometry": { "type": "Point", "coordinates": [ -0.105371557143603, 51.47134500465711 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 7, "NAME": "Tate South Lambeth Library", "POSTCODE": "SW8 1QP", "TELEPHONE": "020 7926 0705", "UPRN": "100023383422", "ADDRESS_1": "180 South Lambeth Road", "EASTING": "530374", "NORTHING": "177251" }, "geometry": { "type": "Point", "coordinates": [ -0.124082721193305, 51.479263360642719 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 8, "NAME": "Streatham Library", "POSTCODE": "SW16 1PN", "TELEPHONE": "020 7926 6768", "UPRN": "100023315960", "ADDRESS_1": "63 Streatham High Road", "EASTING": "530149", "NORTHING": "171946" }, "geometry": { "type": "Point", "coordinates": [ -0.129011766211214, 51.431610793097917 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 9, "NAME": "Upper Norwood Library", "POSTCODE": "SE19 1TJ", "TELEPHONE": "020 8670 2551", "UPRN": "010000446790", "ADDRESS_1": "39 Westow Hill", "EASTING": "533506", "NORTHING": "170749" }, "geometry": { "type": "Point", "coordinates": [ -0.081353108047228, 51.419934887758956 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 10, "NAME": "Waterloo Library", "POSTCODE": "SE1 7QP", "TELEPHONE": "020 7926 8750", "UPRN": "100023225318", "ADDRESS_1": "1 Kennington Road", "EASTING": "531167", "NORTHING": "179397" }, "geometry": { "type": "Point", "coordinates": [ -0.111767658576433, 51.498279911823637 ] } }
+]
+}

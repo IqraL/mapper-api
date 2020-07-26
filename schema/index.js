@@ -7,7 +7,13 @@ module.exports = gql`
   type polygon {
     markers: JSON
   }
+
+  type cctv {
+    location: String
+    points: [Float]
+  }
   type Query {
     getConservationAreas: JSON
+    getCctvLocations: [cctv]
   }
 `;
