@@ -17,12 +17,11 @@ const server = new ApolloServer({
     token: 566223,
   }),
 });
-
-server.applyMiddleware({ app });
-
 app.get("/", function (req, res) {
   res.redirect("/graphql");
 });
+
+server.applyMiddleware({ app });
 
 app.listen({ port: PORT }, () =>
   console.log(` Server ready at http://localhost:4000${server.graphqlPath}`)

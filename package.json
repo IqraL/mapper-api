@@ -7,8 +7,8 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "serve": "node index.js",
+    "start": "node index",
+    "serve": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
