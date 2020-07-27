@@ -1,6 +1,7 @@
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 const { Sequelize } = require("sequelize");
+
 require("dotenv").config();
 
 const typeDefs = require("./schema");
@@ -17,7 +18,7 @@ const server = new ApolloServer({
     token: 566223,
   }),
 });
-app.get("/", function (req, res) {
+app.get("/*", function (req, res) {
   res.redirect("/graphql");
 });
 
