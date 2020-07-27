@@ -17,6 +17,9 @@ const server = new ApolloServer({
     token: 566223,
   }),
 });
+app.get("/", function (req, res) {
+  res.send(200);
+});
 server.applyMiddleware({ app });
 
 app.listen({ port: PORT }, () =>
