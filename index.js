@@ -21,6 +21,9 @@ const server = new ApolloServer({
 app.get("/*", function (req, res) {
   res.redirect("/graphql");
 });
+app.get("/favicon.ico", function (req, res) {
+  res.redirect("/graphql");
+});
 
 server.applyMiddleware({ app });
 
