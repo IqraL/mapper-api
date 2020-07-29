@@ -17,13 +17,9 @@ const PORT = process.env.PORT || 4000;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  playground: {
-    endpoint: `https://mapper-api-iqra-latif.herokuapp.com/`,
-    settings: {
-      "editor.theme": "dark",
-    },
-    introspection: true,
-  },
+  playground: true,
+  introspection: true,
+
   context: ({ req, res }) => ({}),
 });
 
