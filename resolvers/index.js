@@ -14,6 +14,22 @@ const sequelize = new Sequelize(
 
 module.exports = {
   Query: {
+    getRailwayStations: async () => {
+      const [results, metadata] = await sequelize.query(
+        "SELECT * FROM `trainStationLocations`"
+      );
+      const railStationObjs = [];
+      if (results && results.length > 0)
+        results.forEach((ts) => {
+          railStationObjs.push({
+            name: ts.trainstationName,
+            points: [ts.latitude, ts.longitude],
+          });
+        });
+
+      console.log(results);
+      return railStationObjs;
+    },
     getLibraries: () => {
       const librariesProcessed = librariesRawData.features.map((library) => {
         const revesedPoints = [];

@@ -15,9 +15,14 @@ module.exports = gql`
     telepone: String
     points: [Float]
   }
+  type railwayStation {
+    name: String
+    points: [Float]
+  }
   type Query {
     getConservationAreas: JSON
     getCctvLocations: [cctv]
     getLibraries: [Library]
+    getRailwayStations: [railwayStation]
   }
 `;
