@@ -14,19 +14,17 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({ req, res }) => ({
-    token: 566223,
-  }),
+  playground: {
+    endpoint: `https://mapper-api-iqra-latif.herokuapp.com/`,
+    settings: {
+      "editor.theme": "dark",
+    },
+    introspection: true,
+  },
+  context: ({ req, res }) => ({}),
 });
 
 server.applyMiddleware({ app });
-
-app.get("/*", function (req, res) {
-  res.redirect("/graphql");
-});
-app.get("/favicon.ico", function (req, res) {
-  res.redirect("/graphql");
-});
 
 app.listen({ port: PORT }, () =>
   console.log(` Server ready at http://localhost:4000${server.graphqlPath}`)
