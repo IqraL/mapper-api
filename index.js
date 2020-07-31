@@ -12,11 +12,11 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 app.use(cors());
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   playground: true,
-  introspection: true,
 
   context: ({ req, res }) => ({}),
 });

@@ -26,8 +26,6 @@ module.exports = {
             points: [ts.latitude, ts.longitude],
           });
         });
-
-      console.log(results);
       return railStationObjs;
     },
     getLibraries: () => {
