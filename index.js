@@ -8,7 +8,7 @@ const { Sequelize } = require("sequelize");
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
 
-const PORT = process.env.PORT || 4000;
+const port = process.env.PORT || 4000;
 
 const app = express();
 app.get("/", (req, res) => res.send("redirect your endpoint to /graphql"));
@@ -25,6 +25,6 @@ app.use(cors());
 //
 // server.applyMiddleware({ app });
 
-app.listen({ port: PORT }, () =>
+app.listen(port, () =>
   console.log(` Server ready at http://localhost:4000${server.graphqlPath}`)
 );
