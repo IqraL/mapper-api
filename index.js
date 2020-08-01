@@ -3,7 +3,7 @@ const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 const { Sequelize } = require("sequelize");
 
-require("dotenv").config();
+//require("dotenv").config();
 
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
